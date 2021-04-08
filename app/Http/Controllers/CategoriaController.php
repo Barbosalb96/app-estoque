@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Categoria;
 use App\Http\Requests\CategoriaRequest;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
@@ -57,5 +58,16 @@ class CategoriaController extends Controller
         Categoria::find($id)->delete();
 
         return redirect()->route('categoria.index');
+    }
+
+    public function pdfview()
+    {
+        $categorias = Categoria::all();
+
+        $pdf = PDF::loadView('pages.admin.categoria.pddfcat', compact('categorias'));
+
+        return $pdf->setPaper('a4')->stream('todas as categorias');
+
+        //        return \PDF::loadView('pages.admin.categoria.pddfcat', compact('categorias'));
     }
 }

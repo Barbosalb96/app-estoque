@@ -40,12 +40,13 @@
                         <div class="ibox-tools">
                             <a href="{{route('categoria.create')}}" class="btn btn-primary btn-sm">Cadastrar
                                 Categoria</a>
+                            <a href="{{route('categoria.pdf')}}" class="btn btn-primary btn-sm"><i
+                                    class="fa fa-file-pdf-o"></i></a>
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
                             </a>
                         </div>
                     </div>
-
 
 
                     <div class="ibox-content">

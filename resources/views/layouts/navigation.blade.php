@@ -38,8 +38,8 @@
                     <i class="fa fa-truck-moving"></i><span class="nav-label">Fornecedores</span><span
                         class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" aria-expanded="false">
-                    <li><a href="basic_gallery.html">Lista de Fornecedores</a></li>
-                    <li><a href="slick_carousel.html">Cadastrar Fornecedor</a></li>
+                    <li><a href="{{route('fornecedor.index')}}">Lista de Fornecedores</a></li>
+                    <li><a href="{{route('fornecedor.create')}}">Cadastrar Fornecedores</a></li>
                 </ul>
             </li>
             <li>
